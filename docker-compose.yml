@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  db:
+    image: postgres:11
+    ports:
+      - "6543:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: db_name
+    restart: unless-stopped
